@@ -20,8 +20,10 @@ function cellHit(e: MouseEvent) {
 <style scoped>
 .play-grid {
   >>> {
-    --cell-color: tan;
+    --cell-bg: tan;
     --cell-border: #00000070 solid;
+    --cell-border-hover: #00000095 solid;
+
 
     --cell-size: 3rem;
 
@@ -39,12 +41,17 @@ function cellHit(e: MouseEvent) {
 
     cursor: pointer;
 
-    background-color: var(--cell-color);
+    background-color: var(--cell-bg);
     border: var(--cell-border);
   }
 
   .play-grid_cell:active {
     box-shadow: var(--cell-shadow-hit);
+  }
+
+
+  .play-grid_cell:hover {
+    border: var(--cell-border-hover);
   }
 }
 </style>
